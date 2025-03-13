@@ -14,6 +14,10 @@ async function httpUpdateNews(req, res) {
     return res.status(200).json(await News.updateNews(req.body))
 }
 
+async function httpUpdateAllNews(req, res) {
+    return res.status(200).json(await News.updateManyNews(req.body))
+}
+
 async function httpGetCategoryNews(req, res) {
     return res.status(200).json(await News.getCategoryNews(req.body.category))
 }
@@ -27,5 +31,6 @@ module.exports = {
     httpCreateNews,
     httpDeleteNews,
     httpUpdateNews,
-    httpGetCategoryNews
+    httpGetCategoryNews,
+    httpUpdateAllNews
 }

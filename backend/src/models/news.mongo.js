@@ -11,6 +11,10 @@ const NewsSchema = new mongoose.Schema({
         type: String,
         required: true
     }, 
+    description: {
+        type: String,
+        required: true
+    },
     content: {
         type: String,
         required: true
@@ -26,7 +30,7 @@ const NewsSchema = new mongoose.Schema({
     priority: {
         type: Number,
         required: true,
-        unique: true
+       
     }, 
     category: {
         type: String,
