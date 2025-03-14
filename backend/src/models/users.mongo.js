@@ -2,10 +2,7 @@
 const mongoose = require('mongoose')
 
 const usersSchema = new mongoose.Schema({
-    userId: {
-        type: String,
-        required: true
-    },
+    
     firstName: {
         type: String,
         required: true
@@ -14,14 +11,29 @@ const usersSchema = new mongoose.Schema({
         type: String,
         required: true
     }, dob : {
-        type: Date,
+        type: String,
         required: true
-    }, gender: {
+    }, phoneNumber: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    gender: {
         type: String,
         required: true
     }, type: {
         type: String,
         required: true
+    }, lastUpdated: {
+        type: Date,
+        default: Date.now()
     }
 })
 
